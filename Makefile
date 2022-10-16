@@ -7,9 +7,10 @@ format:
 	black *.py mylib/*.py
 lint:
 	#lint
-	pylint *.py mylib/*.py
+	pylint --disable=R,C *.py mylib/*.py
 test:
 	#test
+	python -m pytest -vv --cov=mylib test.py
 deploy:
 	#deploy
 all:
